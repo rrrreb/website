@@ -1,0 +1,136 @@
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    font-family: "Lekton", monospace;
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 102, 0) 100%);
+}
+
+.nav-link {
+    color: #000;
+}
+
+.nav-link:hover {
+    color: #ff4433;
+    text-decoration: underline;
+}
+
+
+body {
+    font-family: "Lekton", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: 100;
+    color: #fff;
+    background-color: #000;
+}
+
+.link {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.link:hover {
+    color: #ff4433;
+}
+
+
+.nav-link:hover {
+    color: #ff4433;
+    text-decoration: underline;
+}
+
+.video-bg {
+    max-width: 100%;
+    height: auto;
+    padding-top: 6rem;
+}
+
+.subject {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+}
+
+.container-space {
+    padding-top: 2rem;
+    margin: 2rem;
+}
+
+
+h1 {
+    font-family: "Lekton", monospace;
+}
+
+h3 {
+    color: #ff4433;
+}
+
+h5 {
+    color: dimgrey;
+}
+
+
+.fot-link {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.fot-link:hover {
+    color: #ff4433;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SM */
+@media(max-width:600px) {
+    .medal-carousel img {
+        max-width: 16rem;
+        margin: auto;
+    }
+}
+
+
+/* LG */
+@media(min-width:992px) {
+    .nav-link {
+        color: #fff;
+        mix-blend-mode: difference;
+    }
+
+    .container-space {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+    }
+
+    .desktop-padding {
+        margin-top: 3rem;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 991px) {
+
+    /* sm e md */
+    .mobile-padding {
+        padding-left: 5rem;
+        /* puoi aumentare a piacere */
+        padding-right: 5rem;
+        margin-top: 3rem;
+    }
+}
