@@ -7,6 +7,65 @@ nav {
     background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 102, 0) 100%);
 }
 
+.logo {
+    --logo-display-width: 140px;
+    --logo-crop-left: calc(var(--logo-display-width) * 777 / 4500);
+    overflow: hidden;
+    display: block;
+    width: var(--logo-display-width);
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: var(--logo-display-width);
+    margin-left: calc(var(--logo-crop-left) * -1);
+    display: block;
+}
+
+.container.py-5 img.img-fluid,
+.container.py-5 video.video-bg,
+#splash video.video-bg {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+body > section .container,
+body > .container.py-5,
+body > nav.container:not(.navbar) {
+    text-align: left;
+}
+
+.container .row > [class*="col-"] {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+}
+
+.container .row > [class*="col-"] > div,
+.container .row > [class*="col-"] > a.link {
+    width: 100%;
+    text-align: left;
+}
+
+.container-space,
+.container-space p,
+.container-space h1,
+.container-space a,
+.container .row > [class*="col-"] p,
+.container .row > [class*="col-"] h1,
+.container .row > [class*="col-"] h3,
+.container .row > [class*="col-"] h5,
+.container .row > [class*="col-"] .lead {
+    text-align: left;
+}
+
+.container .list-unstyled {
+    text-align: left;
+    padding-left: 0;
+}
+
 .nav-link {
     color: #000;
 }
@@ -19,9 +78,8 @@ nav {
 
 body {
     font-family: "Lekton", monospace;
-    font-weight: 400;
-    font-style: normal;
     font-weight: 100;
+    font-style: normal;
     color: #fff;
     background-color: #000;
 }
@@ -35,28 +93,15 @@ body {
     color: #ff4433;
 }
 
-
-.nav-link:hover {
-    color: #ff4433;
-    text-decoration: underline;
-}
-
 .video-bg {
     max-width: 100%;
     height: auto;
     padding-top: 6rem;
 }
 
-.subject {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: 1;
-}
-
 .container-space {
     padding-top: 2rem;
-    margin: 2rem;
+    margin: 2rem 0;
 }
 
 
@@ -96,15 +141,6 @@ h5 {
 
 
 
-/* SM */
-@media(max-width:600px) {
-    .medal-carousel img {
-        max-width: 16rem;
-        margin: auto;
-    }
-}
-
-
 /* LG */
 @media(min-width:992px) {
     .nav-link {
@@ -128,9 +164,35 @@ h5 {
 
     /* sm e md */
     .mobile-padding {
-        padding-left: 5rem;
-        /* puoi aumentare a piacere */
-        padding-right: 5rem;
         margin-top: 3rem;
+    }
+
+    body > section .container,
+    body > .container.py-5,
+    body > nav.container:not(.navbar) {
+        text-align: left;
+    }
+
+    .container .row > [class*="col-"] {
+        width: 100%;
+        max-width: 100%;
+        text-align: left;
+    }
+
+    /* About hero: ripristina due colonne da tablet in su */
+    @media (min-width: 768px) {
+        .container.py-5 .row > .col-md-6:has(.video-bg),
+        .container.py-5 .row > .col-md-6:has(.video-bg) + .col-md-6 {
+            width: 50%;
+            max-width: 50%;
+            flex: 0 0 50%;
+        }
+    }
+
+    #splash .container-space,
+    #splash .container-space p,
+    #splash .container-space h1,
+    #splash .container-space a {
+        text-align: left;
     }
 }
